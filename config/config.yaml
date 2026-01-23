@@ -1,0 +1,76 @@
+# Apex Blockchain Node Configuration
+
+# Node identity
+node:
+  name: "apex-node-1"
+  chain_id: "apex-mainnet-1"
+
+# Network configuration
+network:
+  listen_address: "0.0.0.0:30303"
+  max_peers: 50
+  bootstrap_nodes:
+    - "/ip4/seed1.apex.network/tcp/30303/p2p/QmBootstrapNode1"
+    - "/ip4/seed2.apex.network/tcp/30303/p2p/QmBootstrapNode2"
+
+# RPC configuration
+rpc:
+  enabled: true
+  port: 8545
+  cors_origins:
+    - "*"
+  methods:
+    - "apex_*"
+    - "eth_*"
+    - "web3_*"
+
+# gRPC configuration
+grpc:
+  enabled: false
+  port: 9090
+
+# Storage configuration
+storage:
+  path: "./data/apex.db"
+  cache_size: 512 # MB
+  
+# Consensus configuration
+consensus:
+  type: "dpos"
+  block_time: 3 # seconds
+  epoch_length: 1200 # blocks
+  max_validators: 21
+  
+# Validator configuration (only for validator nodes)
+validator:
+  enabled: false
+  key_file: "./validator_key.json"
+  rewards_address: ""
+
+# Mempool configuration
+mempool:
+  max_size: 10000
+  max_tx_size: 131072 # 128KB
+  
+# Staking configuration
+staking:
+  min_stake: 10.0 # APX
+  min_validator_stake: 100000.0 # APX
+  unbonding_period: 201600 # blocks (~7 days)
+
+# Logging configuration
+logging:
+  level: "info" # debug, info, warn, error
+  format: "json"
+  output: "./logs/apex.log"
+
+# Metrics configuration
+metrics:
+  enabled: true
+  port: 9091
+  
+# Security configuration
+security:
+  enable_tls: false
+  cert_file: ""
+  key_file: ""

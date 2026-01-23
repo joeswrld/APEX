@@ -1,0 +1,60 @@
+{
+    "chain_id": "apex-mainnet-1",
+    "genesis_time": "2026-01-01T00:00:00Z",
+    "total_supply": "500000000000000000000000000",
+    "initial_validators": [
+      {
+        "address": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb0",
+        "public_key": "0x04abcd...",
+        "voting_power": "1000000000000000000000000",
+        "commission": 1000,
+        "moniker": "Genesis Validator 1",
+        "website": "https://validator1.apex.network",
+        "details": "Primary genesis validator"
+      },
+      {
+        "address": "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+        "public_key": "0x04ef01...",
+        "voting_power": "800000000000000000000000",
+        "commission": 800,
+        "moniker": "Genesis Validator 2",
+        "website": "https://validator2.apex.network",
+        "details": "Secondary genesis validator"
+      }
+    ],
+    "initial_accounts": [
+      {
+        "address": "0x0000000000000000000000000000000000000001",
+        "balance": "100000000000000000000000000",
+        "description": "Foundation Treasury"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000002",
+        "balance": "50000000000000000000000000",
+        "description": "Community Fund"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000003",
+        "balance": "30000000000000000000000000",
+        "description": "Development Fund"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000004",
+        "balance": "20000000000000000000000000",
+        "description": "Marketing Fund"
+      }
+    ],
+    "consensus_params": {
+      "block_time": 3,
+      "max_validators": 21,
+      "min_stake": "100000000000000000000000",
+      "unbonding_period": 201600,
+      "slash_fraction_double_sign": 0.05,
+      "slash_fraction_downtime": 0.01
+    },
+    "reward_params": {
+      "initial_reward": "2000000000000000000",
+      "halving_period": 10512000,
+      "minimum_reward": "100000000000000000"
+    }
+  }
