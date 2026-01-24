@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/apex-blockchain/apex/pkg/types"
+	"github.com/apex/pkg/types"
 )
 
 // ValidatorManager manages validator lifecycle

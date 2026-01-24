@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/apex/pkg/core"
+	
 	"github.com/apex/pkg/types"
 )
 

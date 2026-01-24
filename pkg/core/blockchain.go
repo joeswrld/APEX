@@ -160,9 +160,10 @@ func (bc *Blockchain) AddBlock(block *Block) error {
 	defer bc.mu.Unlock()
 	
 	// Validate block
-	if err := bc.ValidateBlock(block); err != nil {
-		return err
-	}
+	// Validate with DPoS
+if err := bc.dpos.ValidateBlock(block.Header.Number, block.Header.Validator, block.Header.Timestamp); err != nil {
+	return err
+}
 	
 	// Execute block
 	if err := bc.executor.ExecuteBlock(block); err != nil {

@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/apex-blockchain/apex/pkg/types"
+	"github.com/apex/pkg/types"
 )
 
 // BlockHeader represents a block header
